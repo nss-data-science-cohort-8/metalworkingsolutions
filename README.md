@@ -6,6 +6,8 @@ You've been provided a dataset of jobs since the beginning of 2023.
 
 A few tips for navigating the database: Each job can have multiple job operations in the job_operations_2023/job_operations_2024 table. You can connect the jobs to the job_operations. The jmp_job_id references jmo_job_id in the job_operations_2023/job_operations_2024 tables.  Jobs can be connected to sales orders through the sales_order_job_links table.  
 
+For your project, your group will be responsible for one of the following sets of questions. Construct an R Shiny app to show your findings.
+
 1. Do an analysis of customers. The customer can be identified using the jmp_customer_organization_id from the jobs table or the omp_customer_organization_id from the sales_orders table. Here are some example questions to get started:  
     a. Which customers have the highest volume of jobs? Which generate the most revenue (as indicated by the omp_order_subtotal_base in the sales_order table)?  
     b. How has the volume of work changed for each customer over time? Are there any seasonal patterns? How have the number of estimated hours per customer changed over time? Estimated hours are in the jmo_estimated_production_hours columns of the job_operations_2023/job_operations_2024 tables.  
@@ -20,4 +22,4 @@ A few tips for navigating the database: Each job can have multiple job operation
     a. Are there certain operations, such as welding, which generate more revenue per production hour?  
     b. Are certain operations consistently generating more revenue per production hour than others or has it changed over time?  
     c. Which operations are most frequently associated with the company's top customers? Are they also the ones that are generating the most revenue per production hour?  
-4. How has the volume of jobs changed over time? Look at the number of bookings or number of shipments by week and month. How does on-time delivery vary by week, month, or over time? Does on-time delivery vary by part? To find on-time delivery, you can compare the jmp_completed_date to the jmp_production_due_date column from the jobs table. 
+4. How has the volume of jobs changed over time? Look at the number of bookings or number of shipments by week and month. How does on-time delivery vary by week, month, or over time? Does on-time delivery vary by part? To find on-time delivery, you can compare the smp_ship_date to the jmp_production_due_date column from the jobs table. 
